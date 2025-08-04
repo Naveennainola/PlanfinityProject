@@ -1,0 +1,16 @@
+.scrolling-wrapper {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+}
+
+.scrolling-wrapper::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari */
+}
+
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
+}

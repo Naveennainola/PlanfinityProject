@@ -1,0 +1,15 @@
+h3 {
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+image {
+    transition: transform 0.3s ease;
+}
+
+image:hover {
+    transform: scale(1.05);
+}

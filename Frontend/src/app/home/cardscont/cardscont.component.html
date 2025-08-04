@@ -1,0 +1,22 @@
+<app-carouselcont></app-carouselcont>
+
+<div class="container-fluid py-5 px-3">
+    <h2 class="mb-4 text-center">Upcoming Events</h2>
+
+    <div class="scrolling-wrapper d-flex flex-nowrap overflow-auto pb-3">
+
+        <div *ngFor="let event of events" class="card me-3 flex-shrink-0" style="width: 18rem;">
+
+            <img [src]="'data:image/webp;base64,'+event.imageBase64" class="card-img-top" alt={{event.title}}>
+            <hr class="my-0" style="border-top: 1px solid #ccc;">
+            <div class="card-body">
+                <h5 class="card-title">{{event.title}}</h5>
+                <p class="card-text"><i class="bi bi-calendar-event"></i> {{event.eventDate}}</p>
+                <p class="card-text"><i class="bi bi-geo-alt"></i>{{event.location}}</p>
+                <a (click)="onCardClick(event)" class="btn btn-primary w-100">Explore</a>
+            </div>
+
+        </div>
+
+    </div>
+</div>

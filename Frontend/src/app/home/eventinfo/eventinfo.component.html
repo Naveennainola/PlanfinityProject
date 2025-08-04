@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+<div class="container-fluid mt-4">
+    <div class="card shadow-lg mx-auto" style="max-width: 90%;">
+        <div class="row g-0" *ngIf="event; else loading">
+            <div class="col-md-5">
+                <img [src]="'data:image/jpeg;base64,' + event.imageBase64" class="img-fluid rounded-start w-100 h-100 object-fit-cover" alt="Event Image">
+            </div>
+            <div class="col-md-7">
+                <div class="card-body">
+                    <h2 class="card-title mb-3">{{ event.title }}</h2>
+                    <p class="card-text"><strong>Date:</strong> {{ event.eventDate | date:'longDate' }}</p>
+                    <p class="card-text"><strong>Location:</strong> {{ event.location }}</p>
+                    <p class="card-text"><strong>Organizer:</strong> {{ event.organizer.name }}</p>
+                    <p class="card-text"><strong>Description:</strong><br> {{ event.description }}</p>
+                    <p class="card-text"><strong>Price:</strong> {{ event.price | currency:'USD':'symbol' }}</p>
+                    <p class="card-text"><strong>Capacity:</strong> {{ event.capacity }} </p>
+                    <p class="card-text"><strong>Category:</strong> {{ event.category }}</p>
+                    <div class="mt-4">
+                        <a (click)="bookEvent()" class="btn btn-primary btn-lg">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ng-template #loading>
+            <div>Loading...</div>
+        </ng-template>
+    </div>
+</div>

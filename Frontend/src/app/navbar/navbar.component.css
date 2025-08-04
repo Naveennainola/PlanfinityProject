@@ -1,0 +1,12 @@
+.navbar {
+    padding: 0.5rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-link {
+    transition: color 0.3s ease;
+}

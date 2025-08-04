@@ -1,0 +1,14 @@
+.header-section {
+    background-color: #212529;
+    /* Matches navbar-dark bg-dark */
+    color: #f8f9fa;
+    /* Light text for contrast */
+    padding: 1.2rem;
+    text-align: center;
+}
+
+.header-section h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}

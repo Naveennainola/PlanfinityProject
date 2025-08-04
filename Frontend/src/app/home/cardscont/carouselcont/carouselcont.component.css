@@ -1,0 +1,13 @@
+#carouselExampleCaptions {
+    padding: 0px 20px 0px 20px;
+    height: 400px;
+}
+
+.carousel-inner {
+    height: 400px;
+    border-radius: 30px;
+}
+
+.carousel-item img {
+    height: 400px;
+}

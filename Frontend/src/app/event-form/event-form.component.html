@@ -1,0 +1,53 @@
+<div class="container mt-4">
+    <form (ngSubmit)="submitEvent()" #eventForm="ngForm" enctype="multipart/form-data">
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label class="form-label">Title</label>
+                <input type="text" class="form-control" [(ngModel)]="event.title" name="title" placeholder="Event Title" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Description</label>
+                <input type="text" class="form-control" [(ngModel)]="event.description" name="description" placeholder="Description" required>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label class="form-label">Event Date & <Time></Time></label>
+                <input type="datetime-local" class="form-control" [(ngModel)]="event.eventDate" name="eventDate" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Price</label>
+                <input type="number" class="form-control" [(ngModel)]="event.price" name="Price" placeholder="e.g. 5000" required>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label class="form-label">Max. Capacity</label>
+                <input type="number" class="form-control" [(ngModel)]="event.capacity" name="Capacity" placeholder="eg. 200 people" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Category</label>
+                <input type="text" class="form-control" [(ngModel)]="event.category" placeholder="e.g. music/concert/party" required>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label class="form-label">Location</label>
+                <input type="text" class="form-control" [(ngModel)]="event.location" name="location" placeholder="Location" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Upload Image</label>
+                <input type="file" class="form-control" (change)="onFileSelected($event)" required>
+            </div>
+        </div>
+
+
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary px-5">Submit</button>
+        </div>
+    </form>
+</div>
